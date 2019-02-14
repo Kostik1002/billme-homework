@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Request logs</title>
+</head>
+<body>
+<h1>Request logs</h1>
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Request</th>
+            <th>IP</th>
+        </tr>
+        <tr th:each="log : ${requestLogList}">
+            <td th:utext="${log.date}">...</td>
+            <td th:utext="${log.request}">...</td>
+            <td th:utext="${log.ip}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
